@@ -91,12 +91,18 @@
 
 #pie {
     font-weight: bold;
-    font-size:20px;
+    font-size:15px;
     color: black;
     font-family: 'Syncopate', sans-serif;
     background-color: #FFE83C;
+}
 
-
+#prueba {
+    font-weight: bold;
+    font-size:15px;
+    color: black;
+    font-family: 'Syncopate', sans-serif;
+    background-color: #FFE83C;
 }
 
 
@@ -116,6 +122,7 @@
       data : {cachehora : (new Date()).getTime()},
       }).done(function(response){
 	    params = 'uuid='+uuid+'&model='+model+'&platform='+platform+'&version='+version;
+      alert(params);
         if(response.state === 'ok'){
           $.mobile.loading("hide");
           window.location.assign("http://mitaxijj.com.ec/pruebas/agent/?"+params);
@@ -150,7 +157,7 @@
       <img src="taxi-logo.png" />
       </br></br>
       <p id="title">Mi Taxi JJ</p></br>
-      <p id="title">- Pruebas -</p>
+      <p id="prueba">- Pruebas -</p>
     </div>
       <br><br>  
     <div data-role="section" align="center">
