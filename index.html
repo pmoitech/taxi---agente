@@ -122,7 +122,6 @@
       data : {cachehora : (new Date()).getTime()},
       }).done(function(response){
 	    params = 'uuid='+uuid+'&model='+model+'&platform='+platform+'&version='+version;
-      alert(params);
         if(response.state === 'ok'){
           $.mobile.loading("hide");
           window.location.assign("http://mitaxijj.com.ec/pruebas/agent/?"+params);
