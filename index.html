@@ -15,28 +15,27 @@
   
     <link rel="stylesheet" href="jquery.mobile-1.3.2.min.css" />
 
-<script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script> 
 
 <script type="text/javascript" charset="utf-8"> 
+  var model;
+  var platform;
+  var version;
+  var uuid;
 
-	
-	var model;
-	var platform;
-	var version;
-	var uuid;
-
-	function onLoad() {
+  function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false); 
     }
 
-	function onDeviceReady() { 
-		model		=	device.model;
-		platform	=	device.platform;
-		version		=	device.version;
-		uuid		=	device.uuid;
-	}
+  function onDeviceReady() { 
+    model   = device.model;
+    platform  = device.platform;
+    version   = device.version;
+    uuid    = device.uuid;
+  }
 
 </script> 
+
 
 <style>
 .ui-bar-f {
@@ -105,12 +104,11 @@
     background-color: #FFE83C;
 }
 
-
 </style>
 
 <script language="JavaScript">
 
-  function connect(lan) {
+  function connect() {
     $.mobile.loading("show");
     $.ajax({
       type: 'GET',
@@ -143,7 +141,7 @@
 <title>Mi Taxi JJ</title>
 </head>   
 
-<body>
+<body onload="onLoad()">
 
 <div data-role="page" id="principal" data-theme="f">
   <div data-theme="f" data-role="header" align="center">
