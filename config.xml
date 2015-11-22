@@ -3,14 +3,14 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id = "com.ec.mitaxijj.agent.pruebas"
-        versionCode = "1" 
+        id = "com.ec.mitaxijj.agent"
+        versionCode = "4" 
         version = "1.0.1">
 
     <name>Taxista</name>
 
     <description>
-        Cooperativa JJ presenta su aplicación para solicitar servicio de taxi en Quito - Ecuador, fácil, rápido, eficente y seguro. by Geocommerce Cia. Ltda. Quito, Ecuador - 2014
+        GeoCommerce & Cooperativa JJ presentan su aplicación para solicitar servicio de taxi en Quito - Ecuador, fácil, rápido, eficente y seguro. by Geocommerce Cia. Ltda. Quito, Ecuador - 2015
     </description>
 
     <author href="http://www.geocommerce.com.ec" email="geo@geocommcerce.com.ec">
