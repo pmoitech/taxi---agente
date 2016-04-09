@@ -122,10 +122,10 @@
 	    params = 'uuid='+uuid+'&model='+model+'&platform='+platform+'&version='+version;
         if(response.state === 'ok'){
           $.mobile.loading("hide");
-          window.location.assign("http://app.mitaxijj.com.ec/agent/?"+params);
+          var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
         }else{
           $.mobile.loading("hide");
-          alert('No dispone de conexion a internet o el servidor no responde, por favor verifique su conexion y vuelva a intentarlo.');
+          alert('Hay un error con la conexión intenta nuevamente');
         }
      }).fail(function(jqXHR, textStatus, errorThrown){
           $.mobile.loading("hide");
