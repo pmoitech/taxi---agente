@@ -5,8 +5,8 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:cdv ="http://cordova.apache.org/ns/1.0"
         id = "com.ec.mitaxijj.agent"
-        versionCode = "5" 
-        version = "1.0.1">
+        versionCode = "6" 
+        version = "1.0.2">
 
     <name>Taxista</name>
 
