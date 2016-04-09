@@ -25,6 +25,7 @@
 
   function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false); 
+        if(localStorage.getItem('agentid') > 0) connect();
     }
 
   function onDeviceReady() { 
@@ -107,8 +108,6 @@
 </style>
 
 <script language="JavaScript">
-
-if(localStorage.getItem('agentid') > 0) connect();
 
   function connect() {
     $.mobile.loading("show");
