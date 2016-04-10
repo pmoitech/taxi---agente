@@ -5,8 +5,8 @@
         xmlns:gap = "http://phonegap.com/ns/1.0"
         xmlns:cdv ="http://cordova.apache.org/ns/1.0"
         id = "com.ec.mitaxijj.agent"
-        versionCode = "7" 
-        version = "7.0.2">
+        versionCode = "5" 
+        version = "1.0.2">
 
     <name>Taxista</name>
 
@@ -51,8 +51,6 @@ permission on your app, which PhoneGap requires.
 
     <!-- Plugins can also be added here. -->
     <gap:plugin name="cordova-plugin-whitelist" version="1.0.0" source = "npm"/>
-    <access origin="tel:*" launch-external="yes"/>
-    <access origin="http://*" launch-external="yes" />
     <gap:plugin name="cordova-plugin-device-orientation" version="1.0.1" source = "npm"/> 
     <gap:plugin name="cordova-plugin-globalization" version="1.0.1" source = "npm"/>
     <gap:plugin name="cordova-plugin-inappbrowser" version="1.0.1" source = "npm"/> 
