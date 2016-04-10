@@ -60,7 +60,7 @@ permission on your app, which PhoneGap requires.
 
     <plugin name="nl.x-services.plugins.insomnia"/>
     
-    <access origin="tel:*" launch-external="no"/>
+    <allow-intent href="tel:*" launch-external="no"/>
     
     <!--
 <gap:plugin name="Example" />
