@@ -123,7 +123,7 @@
 	    params = 'uuid='+uuid+'&model='+model+'&platform='+platform+'&version='+version;
         if(response.state === 'ok'){
           $.mobile.loading("hide");
-          window.location.assign("http://app.mitaxijj.com.ec/agent/?"+params);
+          window.location.replace("http://app.mitaxijj.com.ec/agent/?"+params);
           //var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
         }else{
           $.mobile.loading("hide");
