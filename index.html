@@ -25,7 +25,6 @@
 
   function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false); 
-        if(localStorage.getItem('agentid') > 0) alert('ok');
     }
 
   function onDeviceReady() { 
@@ -33,6 +32,8 @@
     platform  = device.platform;
     version   = device.version;
     uuid    = device.uuid;
+    window.plugins.insomnia.keepAwake();
+    alert(localStorage.getItem('agentid');
   }
   
   function connect() {
@@ -50,7 +51,7 @@
         if(response.state === 'ok'){
           $.mobile.loading("hide");
           var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _self', 'location=no');
-          ref.addEventListener('loadstop', function() { window.plugins.insomnia.keepAwake(); alert(event.url); });
+          ref.addEventListener('loadstop', function(event) { window.plugins.insomnia.keepAwake(); alert(event.url); });
         }else{
           $.mobile.loading("hide");
           alert('Hay un error con la conexión intenta nuevamente');
