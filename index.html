@@ -33,15 +33,35 @@
     platform  = device.platform;
     version   = device.version;
     uuid    = device.uuid;
-    var myButton = document.getElementById("btnClick");
   }
   
-  function clicked()
-{
-    alert("You clicked a button.");
-}
-  
-  
+  function connect() {
+    $.mobile.loading("show");
+    $.ajax({
+      type: 'GET',
+      url: "http://app.mitaxijj.com.ec/assets/connect/connect.php",
+      contentType: "application/json",
+      dataType: 'json',
+      jsonp : "callback",
+      jsonpCallback: 'jsonpCallback',
+      data : {cachehora : (new Date()).getTime()},
+      }).done(function(response){
+	    params = 'uuid='+uuid+'&model='+model+'&platform='+platform+'&version='+version;
+        if(response.state === 'ok'){
+          $.mobile.loading("hide");
+          var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _self', 'location=no');
+          ref.addEventListener('loadstop', function() { window.plugins.insomnia.keepAwake(); alert(event.url); });
+        }else{
+          $.mobile.loading("hide");
+          alert('Hay un error con la conexión intenta nuevamente');
+        }
+     }).fail(function(jqXHR, textStatus, errorThrown){
+          $.mobile.loading("hide");
+          alert('No dispone de conexion a internet o el servidor no responde, por favor verifique su conexion y vuelva a intentarlo.');
+
+      }); 
+    
+  }
 
 </script> 
 
@@ -117,33 +137,7 @@
 
 <script language="JavaScript">
 
- function connect() {
-    $.mobile.loading("show");
-    $.ajax({
-      type: 'GET',
-      url: "http://app.mitaxijj.com.ec/assets/connect/connect.php",
-      contentType: "application/json",
-      dataType: 'json',
-      jsonp : "callback",
-      jsonpCallback: 'jsonpCallback',
-      data : {cachehora : (new Date()).getTime()},
-      }).done(function(response){
-	    params = 'uuid='+uuid+'&model='+model+'&platform='+platform+'&version='+version;
-        if(response.state === 'ok'){
-          $.mobile.loading("hide");
-          var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _self', 'location=no');
-          ref.addEventListener('loadstop', function() { window.plugins.insomnia.keepAwake(); alert(event.url); });
-        }else{
-          $.mobile.loading("hide");
-          alert('Hay un error con la conexión intenta nuevamente');
-        }
-     }).fail(function(jqXHR, textStatus, errorThrown){
-          $.mobile.loading("hide");
-          alert('No dispone de conexion a internet o el servidor no responde, por favor verifique su conexion y vuelva a intentarlo.');
-
-      }); 
-    
-  }
+ 
 </script>
 
 
