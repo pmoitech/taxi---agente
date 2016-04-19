@@ -33,7 +33,16 @@
     platform  = device.platform;
     version   = device.version;
     uuid    = device.uuid;
+    var myButton = document.getElementById("btnClick");
+    myButton.addEventListener("click", clicked, false);
   }
+  
+  function clicked()
+{
+    alert("You clicked a button.");
+}
+  
+  
 
 </script> 
 
