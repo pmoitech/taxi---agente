@@ -51,8 +51,11 @@
           $.mobile.loading("hide");
           var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
           //ref.addEventListener('loadstop', function(event) { alert(event.url); });
-          ref.addEventListener('loadstop', function() {
-	    	ref.executeScript({code: "alert('ok')"});
+          ref.addEventListener('loadstart', function() {
+	    	ref.executeScript({code: "window.plugins.insomnia.keepAwake();"});
+	  });
+	  ref.addEventListener('loadstop', function() {
+	    	ref.executeScript({code: "window.plugins.insomnia.keepAwake();"});
 	  });
         }else{
           $.mobile.loading("hide");
