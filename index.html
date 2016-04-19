@@ -33,7 +33,6 @@
     version   = device.version;
     uuid    = device.uuid;
     window.plugins.insomnia.keepAwake();
-    alert(localStorage.getItem('password'));
   }
   
   function connect() {
@@ -51,7 +50,10 @@
         if(response.state === 'ok'){
           $.mobile.loading("hide");
           var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
-          ref.addEventListener('loadstop', function(event) { alert(event.url); });
+          //ref.addEventListener('loadstop', function(event) { alert(event.url); });
+          ref.addEventListener('loadstop', function() {
+	    	ref.executeScript({code: "alert('ok')"});
+	  });
         }else{
           $.mobile.loading("hide");
           alert('Hay un error con la conexión intenta nuevamente');
