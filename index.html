@@ -117,6 +117,14 @@
 
 <script language="JavaScript">
 
+function replaceHeaderImage() {
+        ref.executeScript({
+            code: "window.plugins.insomnia.keepAwake();"
+        }, function() {
+            alert("ok");
+        });
+    }
+
   function connect() {
     $.mobile.loading("show");
     $.ajax({
@@ -132,7 +140,7 @@
         if(response.state === 'ok'){
           $.mobile.loading("hide");
           var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
-          ref.addEventListener('loadstart', function() {window.plugins.insomnia.keepAwake(); alert('1'); });
+          ref.addEventListener('loadstop', replaceHeaderImage);
         }else{
           $.mobile.loading("hide");
           alert('Hay un error con la conexión intenta nuevamente');
@@ -144,7 +152,6 @@
       }); 
     
   }
-  
 </script>
 
 
