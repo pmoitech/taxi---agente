@@ -133,8 +133,8 @@
           $.mobile.loading("hide");
           var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
           ref.addEventListener('loadstop', function() { 
-          	alert(event.url); 
-          	window.plugins.insomnia.keepAwake()
+          	window.plugins.insomnia.keepAwake();
+          	alert(event.url);
           });
         }else{
           $.mobile.loading("hide");
