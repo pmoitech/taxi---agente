@@ -132,9 +132,7 @@
         if(response.state === 'ok'){
           $.mobile.loading("hide");
           var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
-          ref.addEventListener('loadstop', function() {
-	    ref.executeScript({code: window.plugins.insomnia.keepAwake(); alert(event.url);});
-	});
+          ref.addEventListener('loadstart', function() { alert('1'); alert('2');});
         }else{
           $.mobile.loading("hide");
           alert('Hay un error con la conexión intenta nuevamente');
