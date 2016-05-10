@@ -50,7 +50,8 @@
     <plugin name="org.apache.cordova.inappbrowser" source="pgb" />
     <plugin name="org.apache.cordova.geolocation"  source="pgb" />
     <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
-    <gap:plugin name="cordova-plugin-device" version="1.0.1" source = "npm"/> 
+    <gap:plugin name="cordova-plugin-device" version="1.0.1" source = "npm"/>
+    <plugin name="com.mediamatrixdoo.keepscreenon" spec="1.0.1" source="pgb" />
     
 
     <!-- Third party plugins -->
