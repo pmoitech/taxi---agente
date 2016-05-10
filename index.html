@@ -32,7 +32,7 @@
     platform  = device.platform;
     version   = device.version;
     uuid    = device.uuid;
-    screen.lockOrientation('landscape');
+    cordova.plugins.backgroundMode.enable();
   }
   
   function connect() {
