@@ -25,7 +25,6 @@
 
   function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
-        screen.lockOrientation('landscape');
     }
 
   function onDeviceReady() { 
@@ -33,6 +32,7 @@
     platform  = device.platform;
     version   = device.version;
     uuid    = device.uuid;
+    screen.lockOrientation('landscape');
   }
   
   function connect() {
