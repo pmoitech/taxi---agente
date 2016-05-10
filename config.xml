@@ -52,7 +52,7 @@
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
-    <plugin name="net.yoik.cordova.plugins.screenorientation" spec="1.3.1" source="pgb" />
+
 
     <!-- Define app icon for each platform. -->
     <icon src="logo.png" gap:role="default" />
