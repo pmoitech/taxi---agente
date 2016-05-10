@@ -48,7 +48,7 @@
     <!-- Core plugins -->
     <plugin name="org.apache.cordova.inappbrowser" source="pgb" />
     <plugin name="org.apache.cordova.geolocation"  source="pgb" />
-    <gap:plugin name="de.appplant.cordova.plugin.background-mode" version="0.6.3" />
+    <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
     
 
     <!-- Third party plugins -->
