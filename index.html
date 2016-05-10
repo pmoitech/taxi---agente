@@ -24,7 +24,8 @@
   var uuid;
 
   function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false); 
+        if(localStorage.getItem('agentid') > 0) alert('ok');
     }
 
   function onDeviceReady() { 
@@ -32,43 +33,6 @@
     platform  = device.platform;
     version   = device.version;
     uuid    = device.uuid;
-    cordova.plugins.backgroundMode.enable();
-    keepscreenon.enable();
-  }
-  
-  function connect() {
-    $.mobile.loading("show");
-    $.ajax({
-      type: 'GET',
-      url: "http://app.mitaxijj.com.ec/assets/connect/connect.php",
-      contentType: "application/json",
-      dataType: 'json',
-      jsonp : "callback",
-      jsonpCallback: 'jsonpCallback',
-      data : {cachehora : (new Date()).getTime()},
-      }).done(function(response){
-	    params = 'uuid='+uuid+'&model='+model+'&platform='+platform+'&version='+version;
-        if(response.state === 'ok'){
-          $.mobile.loading("hide");
-          var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
-          /*ref.addEventListener('loadstop', function(event) { alert(event.url); });
-          ref.addEventListener('loadstart', function() {
-	    	ref.executeScript({code: "window.plugins.insomnia.keepAwake();"});
-	  });
-	  ref.addEventListener('loadstop', function() {
-	    	ref.executeScript({code: "window.plugins.insomnia.keepAwake();"});
-	  });
-	  */
-        }else{
-          $.mobile.loading("hide");
-          alert('Hay un error con la conexión intenta nuevamente');
-        }
-     }).fail(function(jqXHR, textStatus, errorThrown){
-          $.mobile.loading("hide");
-          alert('No dispone de conexion a internet o el servidor no responde, por favor verifique su conexion y vuelva a intentarlo.');
-
-      }); 
-    
   }
 
 </script> 
@@ -145,7 +109,33 @@
 
 <script language="JavaScript">
 
- 
+  function connect() {
+    $.mobile.loading("show");
+    $.ajax({
+      type: 'GET',
+      url: "http://app.mitaxijj.com.ec/assets/connect/connect.php",
+      contentType: "application/json",
+      dataType: 'json',
+      jsonp : "callback",
+      jsonpCallback: 'jsonpCallback',
+      data : {cachehora : (new Date()).getTime()},
+      }).done(function(response){
+	    params = 'uuid='+uuid+'&model='+model+'&platform='+platform+'&version='+version;
+        if(response.state === 'ok'){
+          $.mobile.loading("hide");
+          var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
+        }else{
+          $.mobile.loading("hide");
+          alert('Hay un error con la conexión intenta nuevamente');
+        }
+     }).fail(function(jqXHR, textStatus, errorThrown){
+          $.mobile.loading("hide");
+          alert('No dispone de conexion a internet o el servidor no responde, por favor verifique su conexion y vuelva a intentarlo.');
+
+      }); 
+    
+  }
+  
 </script>
 
 
@@ -165,19 +155,14 @@
       <img src="taxi-logo.png" />
       </br></br>
       <p id="title">Mi Taxi JJ</p></br>
-      <p id="prueba">Tu taxi... Seguro!</p>
+      <p id="prueba">Quito - Ecuador</p>
     </div>
       <br><br>  
     <div data-role="section" align="center">
          <a href="#" onclick="connect('es');" id="urles"><img src="entrar.png" /></a>
     </div>
   </div>
-  
-  <!--
-  <button onclick="window.plugins.insomnia.keepAwake()">keep awake</button>
-  <button onclick="window.plugins.insomnia.allowSleepAgain()">allow sleep again</button>
-  -->
-  
+
   <div id="pie" data-theme="h" data-role="footer" data-position="fixed" align="center">
         GeoCommerce
   </div>
@@ -187,3 +172,4 @@
 </body>
 
 </html>
+
