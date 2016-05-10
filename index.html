@@ -24,7 +24,8 @@
   var uuid;
 
   function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false); 
+        document.addEventListener("deviceready", onDeviceReady, false);
+        screen.lockOrientation('landscape');
     }
 
   function onDeviceReady() { 
