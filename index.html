@@ -54,7 +54,7 @@
             cordova.plugins.backgroundMode.setDefaults({ text:'APP MiTaxiJJ.'});
             cordova.plugins.backgroundMode.enable();
             keepscreenon.enable();
-            var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
+            var ref = cordova.InAppBrowser.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
             navigator.Backbutton.goHome(function() {
               console.log('success')
             }, function() {
