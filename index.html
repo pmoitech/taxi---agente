@@ -51,6 +51,7 @@
             cordova.plugins.backgroundMode.setDefaults({
             resume: false
             })
+            cordova.plugins.backgroundMode.setDefaults({ text:'APP MiTaxiJJ está activo.'});
             cordova.plugins.backgroundMode.enable();
             keepscreenon.enable();
             var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
