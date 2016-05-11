@@ -82,14 +82,6 @@
         <access origin="http://phonegap.com" browserOnly="true" /> - only allows http://phonegap.com to be opened by the child browser.
     -->
 
-   <allow-intent href="tel:*" launch-external="yes"/>
-   <allow-navigation href="tel:*" launch-external="yes"/>
-   <access origin="tel:*" launch-external="yes" />
-   <access origin="geo:*" launch-external="yes"/>
-   <access origin="mailto:*" launch-external="yes"/>
-   <access origin="sms:*" launch-external="yes"/>
-   <access origin="market:*" launch-external="yes"/>
-
 </widget>
 
 
