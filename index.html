@@ -50,6 +50,7 @@
           $.mobile.loading("hide");
             cordova.plugins.backgroundMode.enable();
             keepscreenon.enable();
+            var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
             cordova.plugins.backgroundMode.onactivate = function () {
             var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
             }
