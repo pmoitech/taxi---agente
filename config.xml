@@ -83,7 +83,6 @@
     -->
 
    <allow-intent href="tel:*" />
-   <access launch-external="yes" origin="tel:*" />
    <allow-navigation href="tel:*" />
 
 </widget>
