@@ -52,6 +52,7 @@
     <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
     <plugin name="cordova-plugin-device" spec="1.0.1" source="pgb" />
     <plugin name="com.mediamatrixdoo.keepscreenon" spec="1.0.1" source="pgb" />
+    <plugin name="com.badrit.backbutton" spec="0.1.0" source="pgb" />
     
 
     <!-- Third party plugins -->
