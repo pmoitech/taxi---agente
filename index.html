@@ -32,8 +32,6 @@
     platform  = device.platform;
     version   = device.version;
     uuid    = device.uuid;
-    cordova.plugins.backgroundMode.enable();
-    keepscreenon.enable();
   }
   
   function connect() {
@@ -51,6 +49,8 @@
         if(response.state === 'ok'){
           $.mobile.loading("hide");
           var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
+            cordova.plugins.backgroundMode.enable();
+            keepscreenon.enable();
           /*ref.addEventListener('loadstop', function(event) { alert(event.url); });
           ref.addEventListener('loadstart', function() {
             ref.executeScript({code: "window.plugins.insomnia.keepAwake();"});
