@@ -48,12 +48,12 @@
         params = 'uuid='+uuid+'&model='+model+'&platform='+platform+'&version='+version;
         if(response.state === 'ok'){
           $.mobile.loading("hide");
+            cordova.plugins.backgroundMode.setDefaults({
+            resume: false
+            })
             cordova.plugins.backgroundMode.enable();
             keepscreenon.enable();
             var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
-            cordova.plugins.backgroundMode.onactivate = function () {
-            var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
-            }
           /*ref.addEventListener('loadstop', function(event) { alert(event.url); });
           ref.addEventListener('loadstart', function() {
             ref.executeScript({code: "window.plugins.insomnia.keepAwake();"});
