@@ -53,7 +53,7 @@
     <plugin name="cordova-plugin-device" spec="1.0.1" source="pgb" />
     <plugin name="com.mediamatrixdoo.keepscreenon" spec="1.0.1" source="pgb" />
     <plugin name="com.badrit.backbutton" spec="0.1.0" source="pgb" />
-    <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
+    <plugin name="com.jp.whitelistplugin" spec="1.1.2" source="pgb" />
     
 
     <!-- Third party plugins -->
