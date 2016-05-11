@@ -54,6 +54,11 @@
             cordova.plugins.backgroundMode.enable();
             keepscreenon.enable();
             var ref = window.open("http://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
+            navigator.Backbutton.goHome(function() {
+              console.log('success')
+            }, function() {
+              console.log('fail')
+            });
         }else{
           $.mobile.loading("hide");
           alert('Hay un error con la conexión intenta nuevamente');
