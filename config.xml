@@ -47,7 +47,7 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-    <plugin name="com.jp.whitelistplugin" spec="1.1.2" source="pgb" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <plugin name="org.apache.cordova.inappbrowser" spec="0.6.0" source="pgb" />
     <plugin name="org.apache.cordova.geolocation"  source="pgb" />
     <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
