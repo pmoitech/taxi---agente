@@ -47,7 +47,6 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-    <!-- Core plugins -->
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <plugin name="org.apache.cordova.inappbrowser" spec="0.6.0" source="pgb" />
     <plugin name="org.apache.cordova.geolocation"  source="pgb" />
@@ -83,6 +82,7 @@
         <access origin="http://phonegap.com" browserOnly="true" /> - only allows http://phonegap.com to be opened by the child browser.
     -->
 
+   <access origin="*" />
    <allow-intent href="tel:*" />
    <allow-navigation href="tel:*" />
    <access origin="tel:*" launch-external="yes" />
