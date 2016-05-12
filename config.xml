@@ -66,7 +66,13 @@
     <icon src="icon_72.png" width="72" height="72" />
     <icon src="icon_48.png" width="48" height="48" />
     <icon src="icon_36.png" width="36" height="36" />
+    
+    <!-- Allow links to web pages to open in a browser -->
+        <allow-intent href="http://*/*" />
+        <allow-intent href="https://*/*" />
 
+    <!-- Allow tel: links to open the dialer -->
+        <allow-intent href="tel:*" />
  
 
     <!--
