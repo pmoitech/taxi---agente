@@ -32,13 +32,6 @@
     platform  = device.platform;
     version   = device.version;
     uuid    = device.uuid;
-    var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
-    telephoneNumber.get(function(result) {
-        alert("result = " + result);
-    }, function() {
-        alert("error");
-    });
-
   }
   
   function connect() {
