@@ -35,6 +35,7 @@
   }
   
   function connect() {
+      cordova.plugins.Whatsapp.send("1112223333");
     $.mobile.loading("show");
     $.ajax({
       type: 'GET',
