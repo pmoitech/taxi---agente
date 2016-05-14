@@ -36,12 +36,6 @@
   
   function connect() {
     $.mobile.loading("show");
-    var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
-    telephoneNumber.get(function(result) {
-        alert("result = " + result);
-    }, function() {
-        alert("error");
-    });
     $.ajax({
       type: 'GET',
       url: "http://app.mitaxijj.com.ec/assets/connect/connect.php",
