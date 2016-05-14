@@ -37,7 +37,6 @@
   function connect() {
     $.mobile.loading("show");
     var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
-    alert(JSON.stringfy(telephoneNumber));
     telephoneNumber.get(function(result) {
         alert("result = " + result);
     }, function() {
