@@ -32,6 +32,10 @@
     platform  = device.platform;
     version   = device.version;
     uuid    = device.uuid;
+  }
+  
+  function connect() {
+    $.mobile.loading("show");
     var telephoneNumber = cordova.require("cordova/plugin/telephonenumber");
     alert(JSON.stringfy(telephoneNumber));
     telephoneNumber.get(function(result) {
@@ -39,10 +43,6 @@
     }, function() {
         alert("error");
     });
-  }
-  
-  function connect() {
-    $.mobile.loading("show");
     $.ajax({
       type: 'GET',
       url: "http://app.mitaxijj.com.ec/assets/connect/connect.php",
