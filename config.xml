@@ -47,14 +47,13 @@
     <!-- Plugins -->
 
     <!-- Core plugins -->
-    <!--plugin name="com.indigoway.cordova.whitelist.whitelistplugin" source="pgb" /-->
+    <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
     <plugin name="org.apache.cordova.inappbrowser" spec="0.6.0" source="pgb" />
     <plugin name="org.apache.cordova.geolocation"  source="pgb" />
     <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
     <plugin name="cordova-plugin-device" spec="1.0.1" source="pgb" />
     <plugin name="com.mediamatrixdoo.keepscreenon" spec="1.0.1" source="pgb" />
     <plugin name="com.badrit.backbutton" source="pgb" />
-    <plugin name="com.simonmacdonald.telephonenumber" spec="1.0.0" source="pgb" />
     
 
     <!-- Third party plugins -->
