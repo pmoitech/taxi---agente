@@ -42,7 +42,7 @@
     <!--
         Define a specific version of PhoneGap to build into your app.
     -->
-    <preference name="phonegap-version" value="cli-5.1.1" /> <!-- all: current version of PhoneGap -->
+    <preference name="phonegap-version" value="cli-5.2.0" /> <!-- all: current version of PhoneGap -->
 
     <!-- Plugins -->
 
@@ -53,7 +53,7 @@
     <gap:plugin name="de.appplant.cordova.plugin.background-mode" />
     <plugin name="cordova-plugin-device" spec="1.0.1" source="pgb" />
     <plugin name="com.mediamatrixdoo.keepscreenon" spec="1.0.1" source="pgb" />
-    <plugin name="com.badrit.backbutton" source="pgb" />
+    <!--plugin name="com.badrit.backbutton" source="pgb" /-->
     
 
     <!-- Third party plugins -->
