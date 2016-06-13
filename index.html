@@ -35,7 +35,7 @@
   }
   
   function connect() {
-    $.mobile.loading("show");
+    //$.mobile.loading("show");
     $.ajax({
       type: 'GET',
       url: "https://app.mitaxijj.com.ec/assets/connect/connect.php",
@@ -165,7 +165,7 @@
     </div>
       <br><br>  
     <div data-role="section" align="center">
-         <a href="#" onclick="connect('es');" id="urles"><img src="entrar.png" /></a>
+         <a href="#" onclick="connect();" id="urles"><img src="entrar.png" /></a>
     </div>
     <span>v.1.0.3</span>
   </div>
