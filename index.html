@@ -32,8 +32,7 @@
     platform  = device.platform;
     version   = device.version;
     uuid    = device.uuid;
-    document.addEventListener("backbutton", onBackKeyDown, false);
-  }
+    }
   
   function onBackKeyDown() {
         alert('Backbutton key pressed');
@@ -60,7 +59,9 @@
             cordova.plugins.backgroundMode.setDefaults({ text:'APP MiTaxiJJ.'});
             cordova.plugins.backgroundMode.enable();
             keepscreenon.enable();
+            document.addEventListener("backbutton", onBackKeyDown, false);
             var ref = window.open("https://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
+            ref.addEventListener('loadstart', function(event) { document.addEventListener("backbutton", onBackKeyDown, false); });
             
         }else{
           $.mobile.loading("hide");
