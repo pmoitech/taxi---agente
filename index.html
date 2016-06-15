@@ -36,7 +36,11 @@
   }
   
   function onBackKeyDown() {
-        alert('Backbutton key pressed');
+        navigator.Backbutton.goHome(function() {
+          console.log('success')
+        }, function() {
+          console.log('fail')
+        });
     }
  
   function connect() {
