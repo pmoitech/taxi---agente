@@ -25,7 +25,13 @@
 
   function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("backbutton", onBackKeyDown, false);
     }
+    
+    function onBackKeyDown(e) {
+   e.preventDefault();
+   alert('Back Button is Pressed!');
+}
 
   function onDeviceReady() { 
     model   = device.model;
