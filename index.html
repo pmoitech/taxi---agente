@@ -54,15 +54,12 @@
             cordova.plugins.backgroundMode.setDefaults({ text:'APP MiTaxiJJ.'});
             cordova.plugins.backgroundMode.enable();
             keepscreenon.enable();
+            document.addEventListener("backbutton", onBackKeyDown, false);
+            function onBackKeyDown(e) {
+              e.preventDefault();
+            }
             var ref = window.open("https://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
-            ref.addEventListener('exit', function() {
-                ref = window.open("https://app.mitaxijj.com.ec/agent/?"+params, ' _blank', 'location=no');
-                navigator.Backbutton.goHome(function() {
-                console.log('success')
-                }, function() {
-                  console.log('fail')
-                });
-            });
+            
         }else{
           $.mobile.loading("hide");
           alert('Hay un error con la conexión intenta nuevamente');
