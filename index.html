@@ -25,18 +25,19 @@
 
   function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
-        document.addEventListener("backbutton", onBackKeyDown, false);
     }
     
-                function onBackKeyDown(e) {
-              e.preventDefault();
-            }
   function onDeviceReady() { 
     model   = device.model;
     platform  = device.platform;
     version   = device.version;
     uuid    = device.uuid;
+    document.addEventListener("backbutton", onBackKeyDown, false);
   }
+  
+  function onBackKeyDown() {
+        alert('Backbutton key pressed');
+    }
  
   function connect() {
     $.mobile.loading("show");
